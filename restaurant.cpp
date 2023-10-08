@@ -25,11 +25,7 @@ private:
 	string description;
 
 public:
-	item(const string n = "", const string d = "")
-	{
-		name = n;
-		description = d;
-	}
+	item(string n = "", string d = ""):name(n) , description(d) {}
 	void setItemName(const string type)
 	{
 		cout << " Enter "<< type <<" Name: ";
@@ -64,14 +60,14 @@ private:
 	double dealPrice;
 
 public:
-	deal(string dn = " ", int di = 0, string in = " ", string id = " ", string cd = " ", string f = " ", double dp = 0.00):item(in, id)
-	{
-		dealName = dn;
-		dealItems = di;
-    	coldDrink = cd;
-		fries = f;
-		dealPrice = dp;
-	}
+	deal(string dn = " ", int di = 0, string in = " ", string id = " ", string cd = " ", string f = " ", double dp = 0.00):item(in, id),dealName(dn),dealItems(di),coldDrink(cd),fries(f),dealPrice(dp) {}
+	// {
+	// 	dealName = dn;
+	// 	dealItems = di;
+    // 	coldDrink = cd;
+	// 	fries = f;
+	// 	dealPrice = dp;
+	// }
 	void removeDeal()
 	{
 		dealName = " ";
@@ -146,12 +142,12 @@ private:
 	int houseNumber;
 
 public:
-	address(const string sn = "",const int strn = 0,const int hn = 0)
-	{
-		societyName = sn;
-		streetNumber = strn;
-		houseNumber = hn;
-	}
+	address(string sn = "",int strn = 0,int hn = 0):societyName(sn),streetNumber(strn),houseNumber(hn){}
+	// {
+	// 	societyName = sn;
+	// 	streetNumber = strn;
+	// 	houseNumber = hn;
+	// }
 	void setSocietyName()
 	{
 		cout << " Enter society name" << endl;
@@ -189,11 +185,11 @@ private:
 	long phoneNumber;
 
 public:
-	userDetails(string n = "", string society = " ",int streetNum = 0,int houseNum = 0, long pn = 0):addressOfCustomer(society,streetNum,houseNum)
-	{
-		name = n;
-		phoneNumber = pn;
-	}
+	userDetails(string n = "", string society = " ",int streetNum = 0,int houseNum = 0, long pn = 0):addressOfCustomer(society,streetNum,houseNum),name(n),phoneNumber(pn){}
+	// {
+	// 	name = n;
+	// 	phoneNumber = pn;
+	// }
 	void setName()
 	{
 		cout << " Enter your full name" << endl;
@@ -240,12 +236,12 @@ private:
 	int year;
 
 public:
-	date(int d = 0, int m = 0, int y = 0)
-	{
-		day = d;
-		month = m;
-		year = y;
-	}
+	date(int d = 0, int m = 0, int y = 0):day(d),month(m),year(y){}
+	// {
+	// 	day = d;
+	// 	month = m;
+	// 	year = y;
+	// }
 	void setDay(int d)
 	{
 		day = d;
