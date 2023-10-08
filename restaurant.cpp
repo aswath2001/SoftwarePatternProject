@@ -2,6 +2,7 @@
 #include <string>
 #include <string_view>
 #include <conio.h>
+
 using namespace std;
 
 class admin
@@ -176,7 +177,7 @@ private:
 	long phoneNumber;
 
 public:
-	userDetails(const string &n = "",const string &society = " ",const int &streetNum = 0,const int &houseNum = 0,const long &pn = 0):addressOfCustomer(society,streetNum,houseNum),name(n),phoneNumber(pn){}
+	userDetails(const string &n = "",const string &society = " ",const int &streetNum = 0,const int &houseNum = 0,const long &pn = 0):name(n),phoneNumber(pn),addressOfCustomer(society,streetNum,houseNum){}
 	
 	void setName()
 	{
@@ -322,7 +323,7 @@ private:
 
 public:
 	fastFoodRestaurant(const string &rn ="",const int &ao = 0):restaurantName(rn),activeOrders(ao){}
-	void setRestaurantName(const string &rn)
+	void setRestaurantName(const string_view &rn)
 	{
 		restaurantName = rn;
 	}
