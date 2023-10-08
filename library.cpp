@@ -18,7 +18,7 @@ string users[MAX];
 string passw[MAX];
 int stud[MAX];
 string cho;
-string lineu,linep,lines,temp,temp1;
+const string lineu,linep,lines,temp,temp1;
 
 class login
 {
@@ -81,9 +81,7 @@ void student :: add_stu()
 void student :: view_det(int w)
 {
   time_t tt;
-  struct tm * ti;
   time (&tt);
-  ti = localtime(&tt);
   time_t now = time(0);
   struct tm *ltm = localtime(&now);
 
