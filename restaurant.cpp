@@ -61,13 +61,7 @@ private:
 
 public:
 	deal(const string &dn = " ", const int &di = 0, const string &in = " ",const string &id = " ",const string &cd = " ",const string &f = " ",const double &dp = 0.00):item(in, id),dealName(dn),dealItems(di),coldDrink(cd),fries(f),dealPrice(dp) {}
-	// {
-	// 	dealName = dn;
-	// 	dealItems = di;
-    // 	coldDrink = cd;
-	// 	fries = f;
-	// 	dealPrice = dp;
-	// }
+
 	void removeDeal()
 	{
 		dealName = " ";
@@ -143,11 +137,7 @@ private:
 
 public:
 	address(const string &sn = "",const int &strn = 0,const int &hn = 0):societyName(sn),streetNumber(strn),houseNumber(hn){}
-	// {
-	// 	societyName = sn;
-	// 	streetNumber = strn;
-	// 	houseNumber = hn;
-	// }
+	
 	void setSocietyName()
 	{
 		cout << " Enter society name" << endl;
@@ -186,10 +176,7 @@ private:
 
 public:
 	userDetails(const string &n = "",const string &society = " ",const int &streetNum = 0,const int &houseNum = 0,const long &pn = 0):addressOfCustomer(society,streetNum,houseNum),name(n),phoneNumber(pn){}
-	// {
-	// 	name = n;
-	// 	phoneNumber = pn;
-	// }
+	
 	void setName()
 	{
 		cout << " Enter your full name" << endl;
@@ -237,15 +224,15 @@ private:
 
 public:
 	date(const int &d = 0,const int &m = 0,const int &y = 0):day(d),month(m),year(y){}
-	void setDay(int d)
+	void setDay(const int &d)
 	{
 		day = d;
 	}
-	void setMonth(int m)
+	void setMonth(const int &m)
 	{
 		month = m;
 	}
-	void setYear(int y)
+	void setYear(const int &y)
 	{
 		year = y;
 	}
@@ -287,11 +274,11 @@ public:
 	{
 		orderID++;
 	}
-	void setDealNumber(string dn)
+	void setDealNumber(const string &dn)
 	{
 		dealName = dn;
 	}
-	void setOrderStatus(string oS)
+	void setOrderStatus(const string &oS)
 	{
 		orderStatus = oS;
 	}
@@ -477,7 +464,9 @@ public:
 	}
 	void setDate()
 	{
-		int day, month, year;
+		int day;
+        int month;
+        int year;
 		cout << " Enter day" << endl;
 		cin >> day;
 		currentDate.setDay(day);
@@ -547,7 +536,8 @@ int main()
 	cin >> loginOption;
 	system("cls");
 
-	string username, password;
+	string username;
+    string password;
 
 	switch (loginOption)
 	{
@@ -710,7 +700,8 @@ void mainMenu(fastFoodRestaurant lS, int oS)
 	cin >> loginOption;
 	system("cls");
 
-	string username, password;
+	string username;
+    string password;
 
 	switch (loginOption)
 	{
@@ -857,7 +848,8 @@ void mainMenu(fastFoodRestaurant lS, int oS)
 
 void adminLogin(fastFoodRestaurant ls, int os)
 {
-	string username, password;
+	string username;
+    string password;
 
 	cout << " ===============================" << endl;
 	cout << "                              " << endl;
