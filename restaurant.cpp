@@ -1,5 +1,6 @@
 #include <iostream>
 #include <string>
+#include <string_view>
 #include <conio.h>
 using namespace std;
 
@@ -260,7 +261,7 @@ private:
 	string orderStatus;
 
 public:
-	orderDetails(const int &oID = 0,const string &dealN = "",const double &oP = 0.00,const string &oS = ""):orderID(oID),dealName(dealN),orderStatus(oS){}
+	orderDetails(const int &oID = 0,const string &dealN = "",const string &oS = ""):orderID(oID),dealName(dealN),orderStatus(oS){}
 	void display() const
 	{
 		cout << " -------- Order#" << orderID << " --------" << endl;
@@ -274,11 +275,11 @@ public:
 	{
 		orderID++;
 	}
-	void setDealNumber(const string &dn)
+	void setDealNumber(const string_view &dn)
 	{
 		dealName = dn;
 	}
-	void setOrderStatus(const string &oS)
+	void setOrderStatus(const string_view &oS)
 	{
 		orderStatus = oS;
 	}
