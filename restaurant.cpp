@@ -177,7 +177,7 @@ private:
 	long phoneNumber;
 
 public:
-	userDetails(const string &n = "",const string &society = " ",const int &streetNum = 0,const int &houseNum = 0,const long &pn = 0):name(n),phoneNumber(pn),addressOfCustomer(society,streetNum,houseNum){}
+	userDetails(const string &n = "",const string &society = " ",const int &streetNum = 0,const int &houseNum = 0,const long &pn = 0):name(n),addressOfCustomer(society,streetNum,houseNum),phoneNumber(pn){}
 	
 	void setName()
 	{
