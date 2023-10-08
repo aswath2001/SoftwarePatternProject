@@ -25,13 +25,13 @@ private:
 	string description;
 
 public:
-	item(string n = "", string d = ""):name(n) , description(d) {}
+	item(const string &n = "", const string &d = ""):name(n) , description(d) {}
 	void setItemName(const string type)
 	{
 		cout << " Enter "<< type <<" Name: ";
 		cin >> name;
 	}
-	void setItemDescription(const string type)
+	void setItemDescription(const string &type)
 	{
 		cout << " Enter " << type << " Desctiption : ";
 		cin >> description;
@@ -60,7 +60,7 @@ private:
 	double dealPrice;
 
 public:
-	deal(string dn = " ", int di = 0, string in = " ", string id = " ", string cd = " ", string f = " ", double dp = 0.00):item(in, id),dealName(dn),dealItems(di),coldDrink(cd),fries(f),dealPrice(dp) {}
+	deal(const string &dn = " ", const int &di = 0, const string &in = " ",const string &id = " ",const string &cd = " ",const string &f = " ",const double &dp = 0.00):item(in, id),dealName(dn),dealItems(di),coldDrink(cd),fries(f),dealPrice(dp) {}
 	// {
 	// 	dealName = dn;
 	// 	dealItems = di;
@@ -142,7 +142,7 @@ private:
 	int houseNumber;
 
 public:
-	address(string sn = "",int strn = 0,int hn = 0):societyName(sn),streetNumber(strn),houseNumber(hn){}
+	address(const string &sn = "",const int &strn = 0,const int &hn = 0):societyName(sn),streetNumber(strn),houseNumber(hn){}
 	// {
 	// 	societyName = sn;
 	// 	streetNumber = strn;
@@ -185,7 +185,7 @@ private:
 	long phoneNumber;
 
 public:
-	userDetails(string n = "", string society = " ",int streetNum = 0,int houseNum = 0, long pn = 0):addressOfCustomer(society,streetNum,houseNum),name(n),phoneNumber(pn){}
+	userDetails(const string &n = "",const string &society = " ",const int &streetNum = 0,const int &houseNum = 0,const long &pn = 0):addressOfCustomer(society,streetNum,houseNum),name(n),phoneNumber(pn){}
 	// {
 	// 	name = n;
 	// 	phoneNumber = pn;
@@ -236,7 +236,7 @@ private:
 	int year;
 
 public:
-	date(int d = 0, int m = 0, int y = 0):day(d),month(m),year(y){}
+	date(const int &d = 0,const int &m = 0,const int &y = 0):day(d),month(m),year(y){}
 	// {
 	// 	day = d;
 	// 	month = m;
@@ -343,12 +343,12 @@ private:
 	date currentDate;
 
 public:
-	fastFoodRestaurant(string rn ="",int ao = 0)
-	{
-		restaurantName = rn;
-		activeOrders = ao;
-	}
-	void setRestaurantName(string rn)
+	fastFoodRestaurant(const string &rn ="",const int &ao = 0):restaurantName(rn),activeOrders(ao){}
+	// {
+	// 	restaurantName = rn;
+	// 	activeOrders = ao;
+	// }
+	void setRestaurantName(const string &rn)
 	{
 		restaurantName = rn;
 	}
