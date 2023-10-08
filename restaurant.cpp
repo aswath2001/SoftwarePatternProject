@@ -26,7 +26,7 @@ private:
 
 public:
 	item(const string &n = "", const string &d = ""):name(n) , description(d) {}
-	void setItemName(const string type)
+	void setItemName(const string &type)
 	{
 		cout << " Enter "<< type <<" Name: ";
 		cin >> name;
@@ -237,11 +237,6 @@ private:
 
 public:
 	date(const int &d = 0,const int &m = 0,const int &y = 0):day(d),month(m),year(y){}
-	// {
-	// 	day = d;
-	// 	month = m;
-	// 	year = y;
-	// }
 	void setDay(int d)
 	{
 		day = d;
@@ -278,12 +273,7 @@ private:
 	string orderStatus;
 
 public:
-	orderDetails(int oID = 0, string dealN = "", double oP = 0.00, string oS = "")
-	{
-		orderID = oID;
-		dealName = dealN;
-		orderStatus = oS;
-	}
+	orderDetails(const int &oID = 0,const string &dealN = "",const double &oP = 0.00,const string &oS = ""):orderID(oID),dealName(dealN),orderStatus(oS){}
 	void display() const
 	{
 		cout << " -------- Order#" << orderID << " --------" << endl;
@@ -311,7 +301,7 @@ public:
 		customerDetails.setPhoneNumber();
 		customerDetails.setAddress();
 	}
-	void setOrderDate(int d,int m,int y)
+	void setOrderDate(const int &d,const int &m,const int &y)
 	{
 		orderDate.setDay(d);
 		orderDate.setMonth(m);
@@ -344,10 +334,6 @@ private:
 
 public:
 	fastFoodRestaurant(const string &rn ="",const int &ao = 0):restaurantName(rn),activeOrders(ao){}
-	// {
-	// 	restaurantName = rn;
-	// 	activeOrders = ao;
-	// }
 	void setRestaurantName(const string &rn)
 	{
 		restaurantName = rn;
@@ -475,7 +461,7 @@ public:
 		cout << " Menu displayed, press any key to go back to menu" << endl;
 		_getch();
 	}
-	void setOrder(int &orderSlot)
+	void setOrder(const int &orderSlot)
 	{
 		string dealName;
 
@@ -504,14 +490,14 @@ public:
 		cin >> year;
 		currentDate.setYear(year);
 	}
-	void viewOrderForCurrentCustomer(int orderSlot) const
+	void viewOrderForCurrentCustomer(const int &orderSlot) const
 	{
 		orders[orderSlot].display();
 
 		cout << " Order displayed, press any key to go back to menu" << endl;
 		_getch();
 	}
-	void viewOrderStatusForCurrentCustomer(int orderSlot) const
+	void viewOrderStatusForCurrentCustomer(const int &orderSlot) const
 	{
 		cout << " Order Status: " << orders[orderSlot].getOrderStatus() << endl;
 
