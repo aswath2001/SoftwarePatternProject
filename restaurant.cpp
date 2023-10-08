@@ -9,10 +9,6 @@ private:
 	string const username = "admin717";
 	string const password = "project";
 public:
-	admin()
-	{
-
-	}
 	string getUsername() const
 	{
 		return username;
@@ -29,17 +25,17 @@ private:
 	string description;
 
 public:
-	item(string n = "", string d = "")
+	item(const string n = "", const string d = "")
 	{
 		name = n;
 		description = d;
 	}
-	void setItemName(string type)
+	void setItemName(const string type)
 	{
 		cout << " Enter "<< type <<" Name: ";
 		cin >> name;
 	}
-	void setItemDescription(string type)
+	void setItemDescription(const string type)
 	{
 		cout << " Enter " << type << " Desctiption : ";
 		cin >> description;
@@ -150,7 +146,7 @@ private:
 	int houseNumber;
 
 public:
-	address(string sn = "", int strn = 0, int hn = 0)
+	address(const string sn = "",const int strn = 0,const int hn = 0)
 	{
 		societyName = sn;
 		streetNumber = strn;
