@@ -861,7 +861,9 @@ void adminLogin(fastFoodRestaurant ls, int os)
 }
 
 void adminMenu(fastFoodRestaurant ls, int os)
-{}
+{
+	// it is already called in main
+}
 
 void userMenu(fastFoodRestaurant ls, int os)
 {
