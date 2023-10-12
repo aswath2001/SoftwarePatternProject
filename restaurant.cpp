@@ -667,9 +667,6 @@ int main()
 }
 
 
-void adminLogin(fastFoodRestaurant ls, int os){
-
-}
 
 void adminMenu(fastFoodRestaurant ls, int os){
 
@@ -808,7 +805,6 @@ void mainMenu(fastFoodRestaurant lS, int oS)
 	}
 }
 
-/*
 
 void adminLogin(fastFoodRestaurant ls, int os)
 {
@@ -872,7 +868,7 @@ void adminLogin(fastFoodRestaurant ls, int os)
 
 }
 
-void adminMenu(fastFoodRestaurant ls, int os)
+/*void adminMenu(fastFoodRestaurant ls, int os)
 {
 	int adminOptions = 0;
 
