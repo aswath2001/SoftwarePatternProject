@@ -915,20 +915,21 @@ void userMenu(fastFoodRestaurant ls, int os)
 	int userOption = 0;
 
 	cout << " |  Choose from the following  |" << endl;
-	cout << " |      1) View Menu           |" << endl;
-	cout << " |      2) Order               |" << endl;
-	cout << " |      3) View Order          |" << endl;
-	cout << " |      4) View Order Status   |" << endl;
-	cout << " |      5) Exit                |" << endl;
+	cout << " |      1) View Menu (usermenu)          |" << endl;
+	cout << " |      2) Order    (usermenu)           |" << endl;
+	cout << " |      3) View Order  (usermenu)        |" << endl;
+	cout << " |      4) View Order Status  (usermenu) |" << endl;
+	cout << " |      5) Exit    (usermenu)            |" << endl;
 	cin >> userOption;
 	system("cls");
+
+	int noOptFive = 0;
 
 	switch (userOption)
 	{
 	case 1:
 		ls.displayMenu();
-		system("cls");
-		userMenu(ls, os);
+		
 		break;
 	case 2:
 		if (os < 20)
@@ -939,23 +940,23 @@ void userMenu(fastFoodRestaurant ls, int os)
 		{
 			cout << " All order slots are currently being entertained, kindly try again later, sorry for inconvenience" << endl;
 		}
-		system("cls");
-		userMenu(ls, os);
 		break;
 	case 3:
 		ls.viewOrderForCurrentCustomer(os);
-		system("cls");
-		userMenu(ls, os);
+		
 		break;
 	case 4:
 		ls.viewOrderStatusForCurrentCustomer(os);
-		system("cls");
-		userMenu(ls, os);
 		break;
 	case 5:
 		mainMenu(ls, os);
 		break;
 	default:
+		system("cls");
+		userMenu(ls, os);
+	}
+
+	if(noOptFive == 0){
 		system("cls");
 		userMenu(ls, os);
 	}
