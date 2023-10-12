@@ -672,10 +672,6 @@ void adminMenu(fastFoodRestaurant ls, int os){
 
 }
 
-void userMenu(fastFoodRestaurant ls, int os){
-
-}
-
 void mainMenu(fastFoodRestaurant lS, int oS)
 {
 	int loginOption = 0;
@@ -909,6 +905,7 @@ void adminLogin(fastFoodRestaurant ls, int os)
 		break;
 	}
 }
+*/
 
 void userMenu(fastFoodRestaurant ls, int os)
 {
@@ -955,4 +952,3 @@ void userMenu(fastFoodRestaurant ls, int os)
 		userMenu(ls, os);
 	}
 }
-*/
