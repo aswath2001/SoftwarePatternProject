@@ -862,12 +862,12 @@ void adminLogin(fastFoodRestaurant ls, int os)
 
 void adminMenu(fastFoodRestaurant ls, int os)
 {
-	int adminOptions = 0;
+	int adminOptions1 = 0;
 
 	adminMenuDetails();
-	cin >> adminOptions;
+	cin >> adminOptions1;
 	system("cls");
-	switch (adminOptions)
+	switch (adminOptions1)
 	{
 	case 1:
 		ls.setDeal();
@@ -896,7 +896,7 @@ void adminMenu(fastFoodRestaurant ls, int os)
 		mainMenu(ls, os);
 		break;
 	default:
-		cout << " Wrong option entered, enter option again!" << endl;
+		cout << " Wrong option entered, enter option again!!!" << endl;
 		adminMenu(ls, os);
 		break;
 	}
