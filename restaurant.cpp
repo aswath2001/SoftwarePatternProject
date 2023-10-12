@@ -8,8 +8,8 @@ using namespace std;
 class admin
 {
 private:
-	string const username = "admin717";
-	string const password = "project";
+	string const username;
+	string const password;
 public:
 	string getUsername() const
 	{
