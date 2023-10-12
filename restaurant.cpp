@@ -527,6 +527,16 @@ void userMenuDetails(){
 		cout << " |      5) Exit                |" << endl;
 }
 
+void adminMenuDetails(){
+	cout << " |  Choose from the following  |" << endl;
+			cout << " |      1) Add Deal            |" << endl;
+			cout << " |      2) Remove Deal         |" << endl;
+			cout << " |      3) View Order        |" << endl;
+			cout << " |      4) Change Order Status|" << endl;
+			cout << " |      5) View Menu        |" << endl;
+			cout << " |      6) Log out           |" << endl;
+}
+
 int main()
 {	
 	fastFoodRestaurant landOfSpices;
@@ -555,13 +565,7 @@ int main()
 		{
 			system("cls");
 			int adminOption = 0;
-			cout << " |  Choose from the following (admin) |" << endl;
-			cout << " |      1) Add Deal    (admin)        |" << endl;
-			cout << " |      2) Remove Deal(admin)         |" << endl;
-			cout << " |      3) View Order  (admin)        |" << endl;
-			cout << " |      4) Change Order Status(admin) |" << endl;
-			cout << " |      5) View Menu (admin)          |" << endl;
-			cout << " |      6) Log out (admin)            |" << endl;
+			adminMenuDetails();
 			cin >> adminOption;
 			system("cls");
 
@@ -689,13 +693,7 @@ void mainMenu(fastFoodRestaurant lS, int oS)
 		{
 			system("cls");
 			int adminOption = 0;
-			cout << " |  Choose from the following(main menu)  |" << endl;
-			cout << " |      1) Add Deal   (main menu)         |" << endl;
-			cout << " |      2) Remove Deal   (main menu)      |" << endl;
-			cout << " |      3) View Order  (main menu)        |" << endl;
-			cout << " |      4) Change Order Status (main menu)|" << endl;
-			cout << " |      5) View Menu  (main menu)         |" << endl;
-			cout << " |      6) Log out  (main menu)           |" << endl;
+			
 			cin >> adminOption;
 			system("cls");
 			switch (adminOption)
@@ -810,13 +808,7 @@ void adminLogin(fastFoodRestaurant ls, int os)
 	{
 		system("cls");
 		int adminOption = 0;
-		cout << " |  Choose from the following(admin login)  |" << endl;
-		cout << " |      1) Add Deal(admin login)            |" << endl;
-		cout << " |      2) Remove Deal(admin login)         |" << endl;
-		cout << " |      3) View Order(admin login)          |" << endl;
-		cout << " |      4) Change Order Status(admin login) |" << endl;
-		cout << " |      5) View Menu(admin login)           |" << endl;
-		cout << " |      6) Log out(admin login)             |" << endl;
+		adminMenuDetails();
 		cin >> adminOption;
 		system("cls");
 		switch (adminOption)
@@ -869,13 +861,7 @@ void adminMenu(fastFoodRestaurant ls, int os)
 {
 	int adminOptions = 0;
 
-	cout << " |  Choose from the following(admin)  |" << endl;
-	cout << " |      1) Add Deal(admin)            |" << endl;
-	cout << " |      2) Remove Deal(admin)         |" << endl;
-	cout << " |      3) View Order(admin)          |" << endl;
-	cout << " |      4) Change Order Status(admin) |" << endl;
-	cout << " |      5) View Menu(admin)           |" << endl;
-	cout << " |      6) Log out(admin)             |" << endl;
+	adminMenuDetails();
 	cin >> adminOptions;
 	system("cls");
 	switch (adminOptions)
