@@ -501,7 +501,7 @@ void mainMenu(fastFoodRestaurant ls, int os);
 void adminLogin(fastFoodRestaurant ls, int os);
 void adminMenu(fastFoodRestaurant ls, int os);
 void userMenu(fastFoodRestaurant ls, int os);
-
+/*
 int main()
 {	
 	fastFoodRestaurant landOfSpices;
@@ -960,3 +960,4 @@ void userMenu(fastFoodRestaurant ls, int os)
 		userMenu(ls, os);
 	}
 }
+*/
