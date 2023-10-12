@@ -864,18 +864,18 @@ void adminLogin(fastFoodRestaurant ls, int os)
 
 void adminMenu(fastFoodRestaurant ls, int os)
 {
-	int adminOption = 0;
+	int adminOptions = 0;
 
-	cout << " |  Choose from the following  |" << endl;
+	cout << " |  Choose from the following(admin)  |" << endl;
 	cout << " |      1) Add Deal(admin)            |" << endl;
 	cout << " |      2) Remove Deal(admin)         |" << endl;
 	cout << " |      3) View Order(admin)          |" << endl;
 	cout << " |      4) Change Order Status(admin) |" << endl;
 	cout << " |      5) View Menu(admin)           |" << endl;
 	cout << " |      6) Log out(admin)             |" << endl;
-	cin >> adminOption;
+	cin >> adminOptions;
 	system("cls");
-	switch (adminOption)
+	switch (adminOptions)
 	{
 	case 1:
 		ls.setDeal();
@@ -912,20 +912,20 @@ void adminMenu(fastFoodRestaurant ls, int os)
 
 void userMenu(fastFoodRestaurant ls, int os)
 {
-	int userOption = 0;
+	int userOptions = 0;
 
-	cout << " |  Choose from the following  |" << endl;
+	cout << " |  Choose from the following(usermenu)   |" << endl;
 	cout << " |      1) View Menu (usermenu)          |" << endl;
 	cout << " |      2) Order    (usermenu)           |" << endl;
 	cout << " |      3) View Order  (usermenu)        |" << endl;
 	cout << " |      4) View Order Status  (usermenu) |" << endl;
 	cout << " |      5) Exit    (usermenu)            |" << endl;
-	cin >> userOption;
+	cin >> userOptions;
 	system("cls");
 
 	int noOptFive = 0;
 
-	switch (userOption)
+	switch (userOptions)
 	{
 	case 1:
 		ls.displayMenu();
