@@ -518,6 +518,15 @@ void printLogin(){
 	cout << " |         3) Exit(main)             |" << endl;
 }
 
+void userMenuDetails(){
+	cout << " |  Choose from the following  |" << endl;
+		cout << " |      1) View Menu           |" << endl;
+		cout << " |      2) Order               |" << endl;
+		cout << " |      3) View Order          |" << endl;
+		cout << " |      4) View Order Status   |" << endl;
+		cout << " |      5) Exit                |" << endl;
+}
+
 int main()
 {	
 	fastFoodRestaurant landOfSpices;
@@ -597,12 +606,7 @@ int main()
 			adminLogin(landOfSpices, orderSlot);
 		}
 	case 2:
-		cout << " |  Choose from the following  |" << endl;
-		cout << " |      1) View Menu (cust)          |" << endl;
-		cout << " |      2) Order    (cust)           |" << endl;
-		cout << " |      3) View Order (cust)         |" << endl;
-		cout << " |      4) View Order Status(cust)   |" << endl;
-		cout << " |      5) Exit (cust)               |" << endl;
+		userMenuDetails();
 		cin >> userOption;
 		system("cls");
 
@@ -738,12 +742,7 @@ void mainMenu(fastFoodRestaurant lS, int oS)
 			adminLogin(lS, oS);
 		}
 	case 2:
-		cout << " |  Choose from the following  |" << endl;
-		cout << " |      1) View Menu           |" << endl;
-		cout << " |      2) Order               |" << endl;
-		cout << " |      3) View Order          |" << endl;
-		cout << " |      4) View Order Status   |" << endl;
-		cout << " |      5) Exit                |" << endl;
+		
 		cin >> userOption;
 		system("cls");
 
@@ -918,12 +917,7 @@ void userMenu(fastFoodRestaurant ls, int os)
 {
 	int userOptions = 0;
 
-	cout << " |  Choose from the following(usermenu)   |" << endl;
-	cout << " |      1) View Menu (usermenu)          |" << endl;
-	cout << " |      2) Order    (usermenu)           |" << endl;
-	cout << " |      3) View Order  (usermenu)        |" << endl;
-	cout << " |      4) View Order Status  (usermenu) |" << endl;
-	cout << " |      5) Exit    (usermenu)            |" << endl;
+	userMenuDetails();
 	cin >> userOptions;
 	system("cls");
 
