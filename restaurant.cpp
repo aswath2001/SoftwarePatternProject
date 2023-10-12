@@ -502,17 +502,8 @@ void adminLogin(fastFoodRestaurant ls, int os);
 void adminMenu(fastFoodRestaurant ls, int os);
 void userMenu(fastFoodRestaurant ls, int os);
 
-int main()
-{	
-	fastFoodRestaurant landOfSpices;
-	int orderSlot = 0;
-	int userOption = 0;
-	int loginOption = 0;
 
-
-	cout << " Before proceding kindly enter today's date(main) " << endl;
-	landOfSpices.setDate();
-
+void printLogin(){
 	system("cls");
 
 	cout << " |         Welcome to(main)          |" << endl;
@@ -525,9 +516,22 @@ int main()
 	cout << " |         1) Admin(main)            |" << endl;
 	cout << " |         2) User(main)             |" << endl;
 	cout << " |         3) Exit(main)             |" << endl;
+}
+
+int main()
+{	
+	fastFoodRestaurant landOfSpices;
+	int orderSlot = 0;
+	int userOption = 0;
+	int loginOption = 0;
+
+
+	cout << " Before proceding kindly enter today's date(main) " << endl;
+	landOfSpices.setDate();
+
+	printLogin();
 	cin >> loginOption;
 	system("cls");
-
 	string username;
     string password;
 
