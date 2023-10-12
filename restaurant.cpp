@@ -594,12 +594,10 @@ int main()
 				break;
 			default:
 				cout << " Wrong option entered, enter option again!" << endl;
-				adminMenu(landOfSpices, orderSlot);
 				break;
 			}
 			if(mm == 0){
 				system("cls");
-				adminMenu(landOfSpices, orderSlot);
 			}
 		}
 		else
@@ -860,10 +858,6 @@ void adminLogin(fastFoodRestaurant ls, int os)
 
 }
 
-void adminMenu(fastFoodRestaurant ls, int os)
-{
-	// it is already called in main
-}
 
 void userMenu(fastFoodRestaurant ls, int os)
 {
