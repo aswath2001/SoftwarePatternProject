@@ -501,7 +501,7 @@ void mainMenu(fastFoodRestaurant ls, int os);
 void adminLogin(fastFoodRestaurant ls, int os);
 void adminMenu(fastFoodRestaurant ls, int os);
 void userMenu(fastFoodRestaurant ls, int os);
-/*
+
 int main()
 {	
 	fastFoodRestaurant landOfSpices;
@@ -510,21 +510,21 @@ int main()
 	int loginOption = 0;
 
 
-	cout << " Before proceding kindly enter today's date " << endl;
+	cout << " Before proceding kindly enter today's date(main) " << endl;
 	landOfSpices.setDate();
 
 	system("cls");
 
-	cout << " |         Welcome to          |" << endl;
-	cout << " |       Land of Spices        |" << endl;
-	cout << " Press any key to continue..." << endl;
+	cout << " |         Welcome to(main)          |" << endl;
+	cout << " |       Land of Spices(main)        |" << endl;
+	cout << " Press any key to continue...(main)" << endl;
 	_getch();
 	system("cls");
 
-	cout << " |         Login as            |" << endl;
-	cout << " |         1) Admin            |" << endl;
-	cout << " |         2) User             |" << endl;
-	cout << " |         3) Exit             |" << endl;
+	cout << " |         Login as(main)            |" << endl;
+	cout << " |         1) Admin(main)            |" << endl;
+	cout << " |         2) User(main)             |" << endl;
+	cout << " |         3) Exit(main)             |" << endl;
 	cin >> loginOption;
 	system("cls");
 
@@ -535,9 +535,9 @@ int main()
 	{
 	case 1:
 		
-		cout << "         - Login -             " << endl;
-		cout << "        Username: ", cin >> username;
-		cout << "        Password: ", cin >> password;
+		cout << "         - Login(main) -             " << endl;
+		cout << "        Username(main): ", cin >> username;
+		cout << "        Password(main): ", cin >> password;
 		if ((landOfSpices.getAdminPassword() == password) && (landOfSpices.getAdminUsername() == username))
 		{
 			system("cls");
@@ -960,4 +960,3 @@ void userMenu(fastFoodRestaurant ls, int os)
 		userMenu(ls, os);
 	}
 }
-*/
