@@ -861,46 +861,7 @@ void adminLogin(fastFoodRestaurant ls, int os)
 }
 
 void adminMenu(fastFoodRestaurant ls, int os)
-{
-	int adminOptions1 = 0;
-
-	adminMenuDetails();
-	cin >> adminOptions1;
-	system("cls");
-	switch (adminOptions1)
-	{
-	case 1:
-		ls.setDeal();
-		adminMenu(ls, os);
-		break;
-	case 2:
-		ls.removeDeal();
-		adminMenu(ls, os);
-		break;
-	case 3:
-		ls.viewOrders();
-		system("cls");
-		adminMenu(ls, os);
-		break;
-	case 4:
-		ls.changeOrderStatus();
-		system("cls");
-		adminMenu(ls, os);
-		break;
-	case 5:
-		ls.displayMenu();
-		system("cls");
-		adminMenu(ls, os);
-		break;
-	case 6:
-		mainMenu(ls, os);
-		break;
-	default:
-		cout << " Wrong option entered, enter option again!!!" << endl;
-		adminMenu(ls, os);
-		break;
-	}
-}
+{}
 
 void userMenu(fastFoodRestaurant ls, int os)
 {
