@@ -515,26 +515,16 @@ int main()
 
 	system("cls");
 
-	cout << " ===============================" << endl;
-	cout << " |                             |" << endl;
-	cout << " |                             |" << endl;
 	cout << " |         Welcome to          |" << endl;
 	cout << " |       Land of Spices        |" << endl;
-	cout << " |                             |" << endl;
-	cout << " |                             |" << endl;
-	cout << " ===============================" << endl;
 	cout << " Press any key to continue..." << endl;
 	_getch();
 	system("cls");
 
-	cout << " ===============================" << endl;
-	cout << " |                             |" << endl;
 	cout << " |         Login as            |" << endl;
 	cout << " |         1) Admin            |" << endl;
 	cout << " |         2) User             |" << endl;
 	cout << " |         3) Exit             |" << endl;
-	cout << " |                             |" << endl;
-	cout << " ===============================" << endl;
 	cin >> loginOption;
 	system("cls");
 
@@ -545,20 +535,13 @@ int main()
 	{
 	case 1:
 		
-		cout << " ===============================" << endl;
-		cout << "                              " << endl;
 		cout << "         - Login -             " << endl;
 		cout << "        Username: ", cin >> username;
 		cout << "        Password: ", cin >> password;
-		cout << "                              " << endl;
-		cout << "                              " << endl;
-		cout << " ===============================" << endl;
 		if ((landOfSpices.getAdminPassword() == password) && (landOfSpices.getAdminUsername() == username))
 		{
 			system("cls");
 			int adminOption = 0;
-			cout << " ===============================" << endl;
-			cout << " |                             |" << endl;
 			cout << " |  Choose from the following  |" << endl;
 			cout << " |      1) Add Deal            |" << endl;
 			cout << " |      2) Remove Deal         |" << endl;
@@ -566,36 +549,28 @@ int main()
 			cout << " |      4) Change Order Status |" << endl;
 			cout << " |      5) View Menu           |" << endl;
 			cout << " |      6) Log out             |" << endl;
-			cout << " |                             |" << endl;
-			cout << " ===============================" << endl;
 			cin >> adminOption;
 			system("cls");
+
+			int mm = 0;
+
 			switch (adminOption)
 			{
 			case 1:
 				landOfSpices.setDeal();
-				system("cls");
-				adminMenu(landOfSpices, orderSlot);
+				
 				break;
 			case 2:
 				landOfSpices.removeDeal();
-				system("cls");
-				adminMenu(landOfSpices, orderSlot);
 				break;
 			case 3:
 				landOfSpices.viewOrders();
-				system("cls");
-				adminMenu(landOfSpices, orderSlot);
 				break;
 			case 4:
 				landOfSpices.changeOrderStatus();
-				system("cls");
-				adminMenu(landOfSpices, orderSlot);
 				break;
 			case 5:
 				landOfSpices.displayMenu();
-				system("cls");
-				adminMenu(landOfSpices, orderSlot);
 				break;
 			case 6:
 				mainMenu(landOfSpices,orderSlot);
@@ -604,6 +579,10 @@ int main()
 				cout << " Wrong option entered, enter option again!" << endl;
 				adminMenu(landOfSpices, orderSlot);
 				break;
+			}
+			if(mm == 0){
+				system("cls");
+				adminMenu(landOfSpices, orderSlot);
 			}
 		}
 		else
@@ -614,16 +593,12 @@ int main()
 			adminLogin(landOfSpices, orderSlot);
 		}
 	case 2:
-		cout << " ===============================" << endl;
-		cout << " |                             |" << endl;
 		cout << " |  Choose from the following  |" << endl;
 		cout << " |      1) View Menu           |" << endl;
 		cout << " |      2) Order               |" << endl;
 		cout << " |      3) View Order          |" << endl;
 		cout << " |      4) View Order Status   |" << endl;
 		cout << " |      5) Exit                |" << endl;
-		cout << " |                             |" << endl;
-		cout << " ===============================" << endl;
 		cin >> userOption;
 		system("cls");
 
@@ -665,14 +640,8 @@ int main()
 			userMenu(landOfSpices, orderSlot);
 		}
 	case 3:
-		cout << " ===============================" << endl;
-		cout << " |                             |" << endl;
-		cout << " |                             |" << endl;
 		cout << " |      Thanks for using       |" << endl;
 		cout << " |       Land of Spices        |" << endl;
-		cout << " |                             |" << endl;
-		cout << " |                             |" << endl;
-		cout << " ===============================" << endl;
 		break;
 	default:
 		cout << " Wrong option entered, try again!"<<endl;
@@ -691,14 +660,10 @@ void mainMenu(fastFoodRestaurant lS, int oS)
 	int userOption = 0;
 	int orderSlot = oS;
 
-	cout << " ===============================" << endl;
-	cout << " |                             |" << endl;
 	cout << " |         Login as            |" << endl;
 	cout << " |         1) Admin            |" << endl;
 	cout << " |         2) User             |" << endl;
 	cout << " |         3) Exit             |" << endl;
-	cout << " |                             |" << endl;
-	cout << " ===============================" << endl;
 	cin >> loginOption;
 	system("cls");
 
@@ -709,20 +674,13 @@ void mainMenu(fastFoodRestaurant lS, int oS)
 	{
 	case 1:
 
-		cout << " ===============================" << endl;
-		cout << "                              " << endl;
 		cout << "         - Login -             " << endl;
 		cout << "        Username: ", cin >> username;
 		cout << "        Password: ", cin >> password;
-		cout << "                              " << endl;
-		cout << "                              " << endl;
-		cout << " ===============================" << endl;
 		if ((lS.getAdminPassword() == password) && (lS.getAdminUsername() == username))
 		{
 			system("cls");
 			int adminOption = 0;
-			cout << " ===============================" << endl;
-			cout << " |                             |" << endl;
 			cout << " |  Choose from the following  |" << endl;
 			cout << " |      1) Add Deal            |" << endl;
 			cout << " |      2) Remove Deal         |" << endl;
@@ -730,8 +688,6 @@ void mainMenu(fastFoodRestaurant lS, int oS)
 			cout << " |      4) Change Order Status |" << endl;
 			cout << " |      5) View Menu           |" << endl;
 			cout << " |      6) Log out             |" << endl;
-			cout << " |                             |" << endl;
-			cout << " ===============================" << endl;
 			cin >> adminOption;
 			system("cls");
 			switch (adminOption)
@@ -778,16 +734,12 @@ void mainMenu(fastFoodRestaurant lS, int oS)
 			adminLogin(lS, oS);
 		}
 	case 2:
-		cout << " ===============================" << endl;
-		cout << " |                             |" << endl;
 		cout << " |  Choose from the following  |" << endl;
 		cout << " |      1) View Menu           |" << endl;
 		cout << " |      2) Order               |" << endl;
 		cout << " |      3) View Order          |" << endl;
 		cout << " |      4) View Order Status   |" << endl;
 		cout << " |      5) Exit                |" << endl;
-		cout << " |                             |" << endl;
-		cout << " ===============================" << endl;
 		cin >> userOption;
 		system("cls");
 
@@ -831,14 +783,8 @@ void mainMenu(fastFoodRestaurant lS, int oS)
 		}
 		break;
 	case 3:
-		cout << " ===============================" << endl;
-		cout << " |                             |" << endl;
-		cout << " |                             |" << endl;
 		cout << " |      Thanks for using       |" << endl;
 		cout << " |       Land of Spices        |" << endl;
-		cout << " |                             |" << endl;
-		cout << " |                             |" << endl;
-		cout << " ===============================" << endl;
 		break;
 	default:
 		cout << " Wrong option entered, press any key try again!" << endl;
@@ -853,20 +799,14 @@ void adminLogin(fastFoodRestaurant ls, int os)
 	string username;
     string password;
 
-	cout << " ===============================" << endl;
-	cout << "                              " << endl;
+	
 	cout << "         - Login -             " << endl;
 	cout << "        Username: ", cin >> username;
 	cout << "        Password: ", cin >> password;
-	cout << "                              " << endl;
-	cout << "                              " << endl;
-	cout << " ===============================" << endl;
 	if ((ls.getAdminPassword() == password) && (ls.getAdminUsername() == username))
 	{
 		system("cls");
 		int adminOption = 0;
-		cout << " ===============================" << endl;
-		cout << " |                             |" << endl;
 		cout << " |  Choose from the following  |" << endl;
 		cout << " |      1) Add Deal            |" << endl;
 		cout << " |      2) Remove Deal         |" << endl;
@@ -874,8 +814,6 @@ void adminLogin(fastFoodRestaurant ls, int os)
 		cout << " |      4) Change Order Status |" << endl;
 		cout << " |      5) View Menu           |" << endl;
 		cout << " |      6) Log out             |" << endl;
-		cout << " |                             |" << endl;
-		cout << " ===============================" << endl;
 		cin >> adminOption;
 		system("cls");
 		switch (adminOption)
@@ -928,8 +866,6 @@ void adminMenu(fastFoodRestaurant ls, int os)
 {
 	int adminOption = 0;
 
-	cout << " ===============================" << endl;
-	cout << " |                             |" << endl;
 	cout << " |  Choose from the following  |" << endl;
 	cout << " |      1) Add Deal            |" << endl;
 	cout << " |      2) Remove Deal         |" << endl;
@@ -937,8 +873,6 @@ void adminMenu(fastFoodRestaurant ls, int os)
 	cout << " |      4) Change Order Status |" << endl;
 	cout << " |      5) View Menu           |" << endl;
 	cout << " |      6) Log out             |" << endl;
-	cout << " |                             |" << endl;
-	cout << " ===============================" << endl;
 	cin >> adminOption;
 	system("cls");
 	switch (adminOption)
@@ -982,16 +916,12 @@ void userMenu(fastFoodRestaurant ls, int os)
 {
 	int userOption = 0;
 
-	cout << " ===============================" << endl;
-	cout << " |                             |" << endl;
 	cout << " |  Choose from the following  |" << endl;
 	cout << " |      1) View Menu           |" << endl;
 	cout << " |      2) Order               |" << endl;
 	cout << " |      3) View Order          |" << endl;
 	cout << " |      4) View Order Status   |" << endl;
 	cout << " |      5) Exit                |" << endl;
-	cout << " |                             |" << endl;
-	cout << " ===============================" << endl;
 	cin >> userOption;
 	system("cls");
 
