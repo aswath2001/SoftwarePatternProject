@@ -764,12 +764,10 @@ void mainMenu(fastFoodRestaurant lS, int oS)
 			break;
 		case 3:
 			lS.viewOrderForCurrentCustomer(orderSlot);
-			system("cls");
 			userMenu(lS, oS);
 			break;
 		case 4:
 			lS.viewOrderStatusForCurrentCustomer(orderSlot);
-			system("cls");
 			userMenu(lS, oS);
 			break;
 		case 5:
@@ -820,27 +818,22 @@ void adminLogin(fastFoodRestaurant ls, int os)
 		{
 		case 1:
 			ls.setDeal();
-			system("cls");
 			adminMenu(ls, os);
 			break;
 		case 2:
 			ls.removeDeal();
-			system("cls");
 			adminMenu(ls, os);
 			break;
 		case 3:
 			ls.viewOrders();
-			system("cls");
 			adminMenu(ls, os);
 			break;
 		case 4:
 			ls.changeOrderStatus();
-			system("cls");
 			adminMenu(ls, os);
 			break;
 		case 5:
 			ls.displayMenu();
-			system("cls");
 			adminMenu(ls, os);
 			break;
 		case 6:
@@ -856,7 +849,6 @@ void adminLogin(fastFoodRestaurant ls, int os)
 	{
 		cout << " Wrong credentials, press any key and try again!" << endl;
 		_getch();
-		system("cls");
 		adminLogin(ls, os);
 	}
 
@@ -866,7 +858,7 @@ void adminMenu(fastFoodRestaurant ls, int os)
 {
 	int adminOption = 0;
 
-	cout << " |  Choose from the following  |" << endl;
+	cout << " |  Choose from the following(admin)   |" << endl;
 	cout << " |      1) Add Deal(admin)            |" << endl;
 	cout << " |      2) Remove Deal(admin)         |" << endl;
 	cout << " |      3) View Order(admin)          |" << endl;
@@ -874,7 +866,7 @@ void adminMenu(fastFoodRestaurant ls, int os)
 	cout << " |      5) View Menu(admin)           |" << endl;
 	cout << " |      6) Log out(admin)             |" << endl;
 	cin >> adminOption;
-	system("cls");
+
 	switch (adminOption)
 	{
 	case 1:
@@ -887,17 +879,14 @@ void adminMenu(fastFoodRestaurant ls, int os)
 		break;
 	case 3:
 		ls.viewOrders();
-		system("cls");
 		adminMenu(ls, os);
 		break;
 	case 4:
 		ls.changeOrderStatus();
-		system("cls");
 		adminMenu(ls, os);
 		break;
 	case 5:
 		ls.displayMenu();
-		system("cls");
 		adminMenu(ls, os);
 		break;
 	case 6:
@@ -914,14 +903,13 @@ void userMenu(fastFoodRestaurant ls, int os)
 {
 	int userOption = 0;
 
-	cout << " |  Choose from the following  |" << endl;
+	cout << " |  Choose from the following(usermenu)  |" << endl;
 	cout << " |      1) View Menu (usermenu)          |" << endl;
 	cout << " |      2) Order    (usermenu)           |" << endl;
 	cout << " |      3) View Order  (usermenu)        |" << endl;
 	cout << " |      4) View Order Status  (usermenu) |" << endl;
 	cout << " |      5) Exit    (usermenu)            |" << endl;
 	cin >> userOption;
-	system("cls");
 
 	int noOptFive = 0;
 
@@ -952,12 +940,10 @@ void userMenu(fastFoodRestaurant ls, int os)
 		mainMenu(ls, os);
 		break;
 	default:
-		system("cls");
 		userMenu(ls, os);
 	}
 
 	if(noOptFive == 0){
-		system("cls");
 		userMenu(ls, os);
 	}
 }
